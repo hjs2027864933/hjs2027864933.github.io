@@ -152,6 +152,69 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-我，秦始皇-打钱" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/23/我，秦始皇-打钱/">我，秦始皇 打钱</a>
+    </h1>
+  
+
+        
+        <a href="/2020/11/23/我，秦始皇-打钱/" class="archive-article-date">
+  	<time datetime="2020-11-23T09:35:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/2020/11/23/我，秦始皇-打钱/pay.jpg" alt="支付宝"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/11/23/我，秦始皇-打钱/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-安装Ubuntutu-18-04系统，且解决卡屏问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -185,82 +248,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/09/28/安装Ubuntutu-18-04系统，且解决卡屏问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-权值线段树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/11/权值线段树/">权值线段树</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/11/权值线段树/" class="archive-article-date">
-  	<time datetime="2019-08-11T05:17:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;刚刚学习了一遍权值线段树，于是写几个小总结，既方便自己复习，也方便你们阅读。如果有不知道线段树是什么的，可以先去看看线段树的几个基本操作。还有就是这是我的第一个博客，不足之处，请多指教。</p>
-<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>&emsp;&emsp;权值线段树是什么？权值线段树可以说就是一颗线段树，和普通线段树不同的是，权值线段树维护的是某一个数出现的次数（这个次数是全局的，而且是动态的）。全局是说在整个数据中这个数出现的次数，动态是说你可以把数据之外的新的数加到数据中，从而改变这个数的次数。这里不能够理解没关系，后面我会详细说明。第二个不同的是，这颗权值线段树的区间大小是由数据的值域（大小）决定的，普通线段树是由数据的数量决定的。因此当数据跨度很大时，我们没有办法开出很大的数组来建树，我们需要进行离散化（离散化可以百度了解下是干什么的就行）。<br>&emsp;&emsp;这里我们说明了权值线段树和普通线段树的不同。</p>
-<h2 id="权值线段树的功能"><a href="#权值线段树的功能" class="headerlink" title="权值线段树的功能"></a>权值线段树的功能</h2><blockquote>
-<p>1.可以动态的求整个范围第K大的数（某一区间的话需要用归并树来做）<br>2.求出某个数的前驱（尚未实现）<br>3.求出某个数的后继（尚未实现）<br>4.等等</p>
-</blockquote>
-<h2 id="权值线段树的具体实现"><a href="#权值线段树的具体实现" class="headerlink" title="权值线段树的具体实现"></a>权值线段树的具体实现</h2><h3 id="1-建树"><a href="#1-建树" class="headerlink" title="1.建树"></a>1.建树</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span> <span class="comment">//建树的过程其实就是把整棵树遍历下来，进行初始化</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	tree[k].l=l; </span><br><span class="line">	tree[k].r=r;</span><br><span class="line">	tree[k].num=<span class="number">0</span>;</span><br><span class="line">	tree[k].sum=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(l==r)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>;      <span class="comment">//遇到叶子节点自然可以退出了</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">	build(k*<span class="number">2</span>,l,mid);</span><br><span class="line">	build(k*<span class="number">2</span>+<span class="number">1</span>,mid+<span class="number">1</span>,r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在这里我补充一下，可能你会问为什么这个建树过程和普通线段树不一样？因为普通的线段树的数据数量往往是固定的，而权值线段树则可以动态的把某个数加到整棵树中。所以我们用另外一个函数来导入数据。</p>
-<h3 id="2-导入数据"><a href="#2-导入数据" class="headerlink" title="2.导入数据"></a>2.导入数据</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">updata</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> x)</span>   <span class="comment">//x表示你需要导入的数据，如果数据进行了离散化，x就表示原来数的排序</span></span></span><br><span class="line"><span class="function"><span class="comment">// 1 3 7 9 你需要导入7，不需要离散化的话就是导入7，离散化就是导入3（原来数的排序）</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(tree[k].l==tree[k].r)</span><br><span class="line">	&#123;</span><br><span class="line">		tree[k].num++;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> mid=(tree[k].l+tree[k].r)/<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">if</span>(x&lt;=mid)</span><br><span class="line">	updata(k*<span class="number">2</span>,x);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	updata(k*<span class="number">2</span>+<span class="number">1</span>,x);</span><br><span class="line">	tree[k].num=tree[k*<span class="number">2</span>].num+tree[k*<span class="number">2</span>+<span class="number">1</span>].num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个导入操作和普通线段树的单点修改在难度上没有区别</p>
-<h3 id="3-求第K大的值"><a href="#3-求第K大的值" class="headerlink" title="3.求第K大的值"></a>3.求第K大的值</h3><p>原理其实也不难，如果当前节点的左节点数的个数大于等于K个，那么第K大的数一定是在左节点里面并且在左节点里的位置也是第K大。反之，左节点的个数小于K个的话，第K大的数一定是在有节点并且在右节点的位置是第 K - num（num表示左节点数的个数）大</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Kth</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> rank)</span> <span class="comment">//rank表示第K大里的K</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(tree[k].l==tree[k].r)</span><br><span class="line">    <span class="keyword">return</span> tree[k].l;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(tree[k*<span class="number">2</span>].num&gt;=rank)</span><br><span class="line">    Kth(k*<span class="number">2</span>,rank);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    Kth(k*<span class="number">2</span>+<span class="number">1</span>,rank-tree[k*<span class="number">2</span>].num);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-后面的功能还在开发中"><a href="#4-后面的功能还在开发中" class="headerlink" title="4.  后面的功能还在开发中"></a>4.  后面的功能还在开发中</h3>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/11/权值线段树/">展开全文 >></a>
         </p>
       
 
@@ -337,6 +324,82 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/08/11/2019杭电多校联赛第三场Find-the-answer/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-权值线段树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/11/权值线段树/">权值线段树</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/11/权值线段树/" class="archive-article-date">
+  	<time datetime="2019-08-11T05:17:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;刚刚学习了一遍权值线段树，于是写几个小总结，既方便自己复习，也方便你们阅读。如果有不知道线段树是什么的，可以先去看看线段树的几个基本操作。还有就是这是我的第一个博客，不足之处，请多指教。</p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>&emsp;&emsp;权值线段树是什么？权值线段树可以说就是一颗线段树，和普通线段树不同的是，权值线段树维护的是某一个数出现的次数（这个次数是全局的，而且是动态的）。全局是说在整个数据中这个数出现的次数，动态是说你可以把数据之外的新的数加到数据中，从而改变这个数的次数。这里不能够理解没关系，后面我会详细说明。第二个不同的是，这颗权值线段树的区间大小是由数据的值域（大小）决定的，普通线段树是由数据的数量决定的。因此当数据跨度很大时，我们没有办法开出很大的数组来建树，我们需要进行离散化（离散化可以百度了解下是干什么的就行）。<br>&emsp;&emsp;这里我们说明了权值线段树和普通线段树的不同。</p>
+<h2 id="权值线段树的功能"><a href="#权值线段树的功能" class="headerlink" title="权值线段树的功能"></a>权值线段树的功能</h2><blockquote>
+<p>1.可以动态的求整个范围第K大的数（某一区间的话需要用归并树来做）<br>2.求出某个数的前驱（尚未实现）<br>3.求出某个数的后继（尚未实现）<br>4.等等</p>
+</blockquote>
+<h2 id="权值线段树的具体实现"><a href="#权值线段树的具体实现" class="headerlink" title="权值线段树的具体实现"></a>权值线段树的具体实现</h2><h3 id="1-建树"><a href="#1-建树" class="headerlink" title="1.建树"></a>1.建树</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span> <span class="comment">//建树的过程其实就是把整棵树遍历下来，进行初始化</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	tree[k].l=l; </span><br><span class="line">	tree[k].r=r;</span><br><span class="line">	tree[k].num=<span class="number">0</span>;</span><br><span class="line">	tree[k].sum=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(l==r)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>;      <span class="comment">//遇到叶子节点自然可以退出了</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">	build(k*<span class="number">2</span>,l,mid);</span><br><span class="line">	build(k*<span class="number">2</span>+<span class="number">1</span>,mid+<span class="number">1</span>,r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这里我补充一下，可能你会问为什么这个建树过程和普通线段树不一样？因为普通的线段树的数据数量往往是固定的，而权值线段树则可以动态的把某个数加到整棵树中。所以我们用另外一个函数来导入数据。</p>
+<h3 id="2-导入数据"><a href="#2-导入数据" class="headerlink" title="2.导入数据"></a>2.导入数据</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">updata</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> x)</span>   <span class="comment">//x表示你需要导入的数据，如果数据进行了离散化，x就表示原来数的排序</span></span></span><br><span class="line"><span class="function"><span class="comment">// 1 3 7 9 你需要导入7，不需要离散化的话就是导入7，离散化就是导入3（原来数的排序）</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(tree[k].l==tree[k].r)</span><br><span class="line">	&#123;</span><br><span class="line">		tree[k].num++;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> mid=(tree[k].l+tree[k].r)/<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">if</span>(x&lt;=mid)</span><br><span class="line">	updata(k*<span class="number">2</span>,x);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	updata(k*<span class="number">2</span>+<span class="number">1</span>,x);</span><br><span class="line">	tree[k].num=tree[k*<span class="number">2</span>].num+tree[k*<span class="number">2</span>+<span class="number">1</span>].num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个导入操作和普通线段树的单点修改在难度上没有区别</p>
+<h3 id="3-求第K大的值"><a href="#3-求第K大的值" class="headerlink" title="3.求第K大的值"></a>3.求第K大的值</h3><p>原理其实也不难，如果当前节点的左节点数的个数大于等于K个，那么第K大的数一定是在左节点里面并且在左节点里的位置也是第K大。反之，左节点的个数小于K个的话，第K大的数一定是在有节点并且在右节点的位置是第 K - num（num表示左节点数的个数）大</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Kth</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> rank)</span> <span class="comment">//rank表示第K大里的K</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(tree[k].l==tree[k].r)</span><br><span class="line">    <span class="keyword">return</span> tree[k].l;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(tree[k*<span class="number">2</span>].num&gt;=rank)</span><br><span class="line">    Kth(k*<span class="number">2</span>,rank);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    Kth(k*<span class="number">2</span>+<span class="number">1</span>,rank-tree[k*<span class="number">2</span>].num);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-后面的功能还在开发中"><a href="#4-后面的功能还在开发中" class="headerlink" title="4.  后面的功能还在开发中"></a>4.  后面的功能还在开发中</h3>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/11/权值线段树/">展开全文 >></a>
         </p>
       
 
