@@ -152,6 +152,68 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-这是一个测试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/23/这是一个测试/">这是一个测试</a>
+    </h1>
+  
+
+        
+        <a href="/2020/11/23/这是一个测试/" class="archive-article-date">
+  	<time datetime="2020-11-23T08:15:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/11/23/这是一个测试/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-wuhu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -338,82 +400,6 @@
 
 
   
-    <article id="post-2019杭电多校联赛第三场Find-the-answer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/11/2019杭电多校联赛第三场Find-the-answer/">2019杭电多校联赛第三场Find the answer</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/11/2019杭电多校联赛第三场Find-the-answer/" class="archive-article-date">
-  	<time datetime="2019-08-11T05:17:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Find-the-answer"><a href="#Find-the-answer" class="headerlink" title="Find the answer"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6609" target="_blank" rel="noopener">Find the answer</a></h2><h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>Given a sequence of n integers called W and an integer m. For each i (1 &lt;= i &lt;= n), you can choose some elements $W_k$ (1 &lt;= k &lt; i), and change them to zero to make $\sum_{j=1}^{i}{W_j&lt;=m}$. So what’s the minimum number of chosen elements to meet the requirements above?.</p>
-<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>The first line contains an integer Q —— the number of test cases.<br>For each test case:<br>The first line contains two integers n and m —— n represents the number of elemens in sequence W and m is as described above.<br>The second line contains n integers, which means the sequence W.<br>1 &lt;= Q &lt;= 15<br>1 &lt;= n &lt;= 2*10^5<br>1 &lt;= m &lt;= 10^9<br>For each i, 1 &lt;= $W_i$ &lt;= m</p>
-<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>For each test case, you should output n integers in one line: i-th integer means the minimum number of chosen elements Wk (1 &lt;= k &lt; i), and change them to zero to make $\sum_{j=1}^{i}{W_j&lt;=m}$.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>2  
-7 15  
-1 2 3 4 5 6 7  
-5 100  
-80 40 40 40 60</code></pre><h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>0 0 0 0 0 2 3  
-0 1 1 2 3</code></pre><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>先给你一个数组，和一个数 m 。从左到右不断变大所选择的区间范围，你最少删除区间内的几个数使得剩下的数之和不超过 m （当前区间最右边的数不能删）。</p>
-<h3 id="主要思路"><a href="#主要思路" class="headerlink" title="主要思路"></a>主要思路</h3><p>我们可以理解最多可以选几个数，然后这些数的和不大于 m，那我们肯定是选数字小的。我们这里为什么可以用权值线段树，我认为有三点，一点是我们权值线段树维护的是数字的个数，当这个区间满足条件时，我们就需要这个区间数字的个数，还有一点就是，权值线段树在一定意义上是有序的，当左子节点的数字和大于等于 m 时我们一定是 去左子节点查找，左子节点的数字和小于 m 时我们就把左子节点的数字的个数全部加上 然后去右子节点查找。最后这点是: 我们需要判断的情况是动态的，区间范围不断扩大，这里我们每判断一次后需要把新的数字添加到树中。到这里我想你应该已经明白我们的解题过程了，那就是判断、添加、判断、添加。。。 因此我们需要维护两个数据，一个就是区间数字的个数，一个就是区间数字的和。</p>
-<h3 id="ac代码"><a href="#ac代码" class="headerlink" title="ac代码"></a>ac代码</h3><p>具体细节见代码注释</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> Max=<span class="number">2e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> num2[Max]=&#123;<span class="number">0</span>&#125;;  <span class="comment">//原来的数据和离散化之后的数据通过num2进行对应</span></span><br><span class="line"><span class="keyword">int</span> num[Max]=&#123;<span class="number">0</span>&#125;;	<span class="comment">//保存原来的数组，并且从这个数组中一个一个的添加</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">str</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> l,r;</span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line">	ll  sum; <span class="comment">//这里的sum用ll类型</span></span><br><span class="line">&#125;tree[<span class="number">4</span>*Max];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span> <span class="comment">//建树过程就是初始化</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	tree[k].l=l; </span><br><span class="line">	tree[k].r=r;</span><br><span class="line">	tree[k].num=<span class="number">0</span>;</span><br><span class="line">	tree[k].sum=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(l==r)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">	build(k*<span class="number">2</span>,l,mid);</span><br><span class="line">	build(k*<span class="number">2</span>+<span class="number">1</span>,mid+<span class="number">1</span>,r);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">updata</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> x)</span>   <span class="comment">//x表示你需要添加的数据，如果数据进行了离散化，x就表示原来数的排序</span></span></span><br><span class="line"><span class="function"><span class="comment">// 1 3 7 9 你需要导入7，不需要离散化的话就是导入7，离散化就是导入3（原来数的排序，7是第三个数）</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(tree[k].l==tree[k].r)</span><br><span class="line">	&#123;</span><br><span class="line">		tree[k].num++;</span><br><span class="line">		tree[k].sum+=num2[x];   <span class="comment">//因为数据离散化了，所以加上num2[x],而不是x</span></span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> mid=(tree[k].l+tree[k].r)/<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">if</span>(x&lt;=mid)</span><br><span class="line">	updata(k*<span class="number">2</span>,x);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	updata(k*<span class="number">2</span>+<span class="number">1</span>,x);</span><br><span class="line">	tree[k].num=tree[k*<span class="number">2</span>].num+tree[k*<span class="number">2</span>+<span class="number">1</span>].num;</span><br><span class="line">	tree[k].sum=tree[k*<span class="number">2</span>].sum+tree[k*<span class="number">2</span>+<span class="number">1</span>].sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> x)</span> <span class="comment">//x 表示 m-num[i]</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(tree[k].sum&lt;=x)  	<span class="comment">//当前节点的数字和小于x 直接返回该节点的数字个数（我全都要2333）</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> tree[k].num;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(tree[k].l==tree[k].r) <span class="comment">//访问到叶子节点了，这里我们需要注意tree[k].l表示的是离散化之后的数字（也就是原来数字的排序），num2[tree[k].l]表示的是原来的数字，x/num2[tree[k].l]表示我们最多拿几个这样的数字，tree[k].num表示我们一共有多少个这样的数字，我们选择小的那个。（这里和我们去商店买东西是一个道理，店里有多少货，我们能买多少货，最后得到的货的数量一定是小的那个）</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> min(tree[k].num,x/num2[tree[k].l]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(tree[k*<span class="number">2</span>].sum&gt;=x)  <span class="comment">//左子节点数字和大于等于当前x 进入左节点查找  </span></span><br><span class="line">	<span class="keyword">return</span> query(k*<span class="number">2</span>,x);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">return</span> tree[k*<span class="number">2</span>].num+query(k*<span class="number">2</span>+<span class="number">1</span>,x-tree[k*<span class="number">2</span>].sum); <span class="comment">//左子节点数字和小于 x 先把左子节点的数字的个数全部加上，再加上右子节点能获取的个数，这里x需要减掉左子节点的和（你不可能买了东西不付钱）</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">int</span> T,n,m,nn,ans,pos; <span class="comment">//nn表示不同数的个数，离散化后就是最大的数 </span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n,&amp;m);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;num[i]);</span><br><span class="line">			num2[i]=num[i];</span><br><span class="line">		&#125;</span><br><span class="line">		sort(num2+<span class="number">1</span>,num2+n+<span class="number">1</span>);  <span class="comment">//对数据进行排序</span></span><br><span class="line">		nn=unique(num2+<span class="number">1</span>,num2+<span class="number">1</span>+n)-num2<span class="number">-1</span>; <span class="comment">//算出去重之后数据的个数</span></span><br><span class="line">		build(<span class="number">1</span>,<span class="number">1</span>,nn);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(i==<span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"0 "</span>); </span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				ans=query(<span class="number">1</span>,m-num[i]);  <span class="comment">//先进行判断</span></span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d "</span>,i-ans<span class="number">-1</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			pos=lower_bound(num2+<span class="number">1</span>,num2+<span class="number">1</span>+nn,num[i])-num2; <span class="comment">//算出需要添加的这个数的排序</span></span><br><span class="line">			updata(<span class="number">1</span>,pos);  <span class="comment">//进行添加</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h3><p><a href="https://blog.csdn.net/birdmanqin/article/details/97752660" target="_blank" rel="noopener">https://blog.csdn.net/birdmanqin/article/details/97752660</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/11/2019杭电多校联赛第三场Find-the-answer/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-权值线段树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -461,6 +447,82 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/08/11/权值线段树/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2019杭电多校联赛第三场Find-the-answer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/11/2019杭电多校联赛第三场Find-the-answer/">2019杭电多校联赛第三场Find the answer</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/11/2019杭电多校联赛第三场Find-the-answer/" class="archive-article-date">
+  	<time datetime="2019-08-11T05:17:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Find-the-answer"><a href="#Find-the-answer" class="headerlink" title="Find the answer"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6609" target="_blank" rel="noopener">Find the answer</a></h2><h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>Given a sequence of n integers called W and an integer m. For each i (1 &lt;= i &lt;= n), you can choose some elements $W_k$ (1 &lt;= k &lt; i), and change them to zero to make $\sum_{j=1}^{i}{W_j&lt;=m}$. So what’s the minimum number of chosen elements to meet the requirements above?.</p>
+<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>The first line contains an integer Q —— the number of test cases.<br>For each test case:<br>The first line contains two integers n and m —— n represents the number of elemens in sequence W and m is as described above.<br>The second line contains n integers, which means the sequence W.<br>1 &lt;= Q &lt;= 15<br>1 &lt;= n &lt;= 2*10^5<br>1 &lt;= m &lt;= 10^9<br>For each i, 1 &lt;= $W_i$ &lt;= m</p>
+<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>For each test case, you should output n integers in one line: i-th integer means the minimum number of chosen elements Wk (1 &lt;= k &lt; i), and change them to zero to make $\sum_{j=1}^{i}{W_j&lt;=m}$.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><pre><code>2  
+7 15  
+1 2 3 4 5 6 7  
+5 100  
+80 40 40 40 60</code></pre><h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><pre><code>0 0 0 0 0 2 3  
+0 1 1 2 3</code></pre><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>先给你一个数组，和一个数 m 。从左到右不断变大所选择的区间范围，你最少删除区间内的几个数使得剩下的数之和不超过 m （当前区间最右边的数不能删）。</p>
+<h3 id="主要思路"><a href="#主要思路" class="headerlink" title="主要思路"></a>主要思路</h3><p>我们可以理解最多可以选几个数，然后这些数的和不大于 m，那我们肯定是选数字小的。我们这里为什么可以用权值线段树，我认为有三点，一点是我们权值线段树维护的是数字的个数，当这个区间满足条件时，我们就需要这个区间数字的个数，还有一点就是，权值线段树在一定意义上是有序的，当左子节点的数字和大于等于 m 时我们一定是 去左子节点查找，左子节点的数字和小于 m 时我们就把左子节点的数字的个数全部加上 然后去右子节点查找。最后这点是: 我们需要判断的情况是动态的，区间范围不断扩大，这里我们每判断一次后需要把新的数字添加到树中。到这里我想你应该已经明白我们的解题过程了，那就是判断、添加、判断、添加。。。 因此我们需要维护两个数据，一个就是区间数字的个数，一个就是区间数字的和。</p>
+<h3 id="ac代码"><a href="#ac代码" class="headerlink" title="ac代码"></a>ac代码</h3><p>具体细节见代码注释</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> Max=<span class="number">2e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> num2[Max]=&#123;<span class="number">0</span>&#125;;  <span class="comment">//原来的数据和离散化之后的数据通过num2进行对应</span></span><br><span class="line"><span class="keyword">int</span> num[Max]=&#123;<span class="number">0</span>&#125;;	<span class="comment">//保存原来的数组，并且从这个数组中一个一个的添加</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">str</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> l,r;</span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line">	ll  sum; <span class="comment">//这里的sum用ll类型</span></span><br><span class="line">&#125;tree[<span class="number">4</span>*Max];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span> <span class="comment">//建树过程就是初始化</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	tree[k].l=l; </span><br><span class="line">	tree[k].r=r;</span><br><span class="line">	tree[k].num=<span class="number">0</span>;</span><br><span class="line">	tree[k].sum=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(l==r)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">	build(k*<span class="number">2</span>,l,mid);</span><br><span class="line">	build(k*<span class="number">2</span>+<span class="number">1</span>,mid+<span class="number">1</span>,r);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">updata</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> x)</span>   <span class="comment">//x表示你需要添加的数据，如果数据进行了离散化，x就表示原来数的排序</span></span></span><br><span class="line"><span class="function"><span class="comment">// 1 3 7 9 你需要导入7，不需要离散化的话就是导入7，离散化就是导入3（原来数的排序，7是第三个数）</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(tree[k].l==tree[k].r)</span><br><span class="line">	&#123;</span><br><span class="line">		tree[k].num++;</span><br><span class="line">		tree[k].sum+=num2[x];   <span class="comment">//因为数据离散化了，所以加上num2[x],而不是x</span></span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> mid=(tree[k].l+tree[k].r)/<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">if</span>(x&lt;=mid)</span><br><span class="line">	updata(k*<span class="number">2</span>,x);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	updata(k*<span class="number">2</span>+<span class="number">1</span>,x);</span><br><span class="line">	tree[k].num=tree[k*<span class="number">2</span>].num+tree[k*<span class="number">2</span>+<span class="number">1</span>].num;</span><br><span class="line">	tree[k].sum=tree[k*<span class="number">2</span>].sum+tree[k*<span class="number">2</span>+<span class="number">1</span>].sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> x)</span> <span class="comment">//x 表示 m-num[i]</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(tree[k].sum&lt;=x)  	<span class="comment">//当前节点的数字和小于x 直接返回该节点的数字个数（我全都要2333）</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> tree[k].num;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(tree[k].l==tree[k].r) <span class="comment">//访问到叶子节点了，这里我们需要注意tree[k].l表示的是离散化之后的数字（也就是原来数字的排序），num2[tree[k].l]表示的是原来的数字，x/num2[tree[k].l]表示我们最多拿几个这样的数字，tree[k].num表示我们一共有多少个这样的数字，我们选择小的那个。（这里和我们去商店买东西是一个道理，店里有多少货，我们能买多少货，最后得到的货的数量一定是小的那个）</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> min(tree[k].num,x/num2[tree[k].l]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(tree[k*<span class="number">2</span>].sum&gt;=x)  <span class="comment">//左子节点数字和大于等于当前x 进入左节点查找  </span></span><br><span class="line">	<span class="keyword">return</span> query(k*<span class="number">2</span>,x);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="keyword">return</span> tree[k*<span class="number">2</span>].num+query(k*<span class="number">2</span>+<span class="number">1</span>,x-tree[k*<span class="number">2</span>].sum); <span class="comment">//左子节点数字和小于 x 先把左子节点的数字的个数全部加上，再加上右子节点能获取的个数，这里x需要减掉左子节点的和（你不可能买了东西不付钱）</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">int</span> T,n,m,nn,ans,pos; <span class="comment">//nn表示不同数的个数，离散化后就是最大的数 </span></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">	<span class="keyword">while</span>(T--)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n,&amp;m);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;num[i]);</span><br><span class="line">			num2[i]=num[i];</span><br><span class="line">		&#125;</span><br><span class="line">		sort(num2+<span class="number">1</span>,num2+n+<span class="number">1</span>);  <span class="comment">//对数据进行排序</span></span><br><span class="line">		nn=unique(num2+<span class="number">1</span>,num2+<span class="number">1</span>+n)-num2<span class="number">-1</span>; <span class="comment">//算出去重之后数据的个数</span></span><br><span class="line">		build(<span class="number">1</span>,<span class="number">1</span>,nn);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(i==<span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"0 "</span>); </span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				ans=query(<span class="number">1</span>,m-num[i]);  <span class="comment">//先进行判断</span></span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d "</span>,i-ans<span class="number">-1</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			pos=lower_bound(num2+<span class="number">1</span>,num2+<span class="number">1</span>+nn,num[i])-num2; <span class="comment">//算出需要添加的这个数的排序</span></span><br><span class="line">			updata(<span class="number">1</span>,pos);  <span class="comment">//进行添加</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h3><p><a href="https://blog.csdn.net/birdmanqin/article/details/97752660" target="_blank" rel="noopener">https://blog.csdn.net/birdmanqin/article/details/97752660</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/11/2019杭电多校联赛第三场Find-the-answer/">展开全文 >></a>
         </p>
       
 
